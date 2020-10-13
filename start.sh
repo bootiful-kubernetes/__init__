@@ -2,7 +2,7 @@
 
 start=$( cd `dirname $0` && pwd	 )
 echo "initializing from ${start} "
-cat repositories.txt | while read l ; do
+cat https://raw.githubusercontent.com/bootiful-kubernetes/__init__/master/repositories.txt | while read l ; do
  
  d=$(  echo $l | cut -f5 -d\/ | cut -f1 -d\.  ) 
  echo "Processing $d"  
