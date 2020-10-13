@@ -2,7 +2,7 @@
 
 start=$( cd `dirname $0` && pwd	 )
 echo "initializing from ${start} "
-curl https://raw.githubusercontent.com/reactive-spring-book/publication/master/ci/repositories.txt | while read l ; do
+cat repositories.txt | while read l ; do
  
  d=$(  echo $l | cut -f5 -d\/ | cut -f1 -d\.  ) 
  echo "Processing $d"  
@@ -14,13 +14,9 @@ curl https://raw.githubusercontent.com/reactive-spring-book/publication/master/c
  	# if you want this to be freshly initialized then check in your work and delete the directory 
  else  	
  	echo "initializing ${dir_to_create}"  
-	git_repo=git@github.com:reactive-spring-book/${d}.git
+	git_repo=git@github.com:bootiful-kubernetes/${d}.git
  	git clone ${git_repo} ${dir_to_create}
  fi
 done 
 
 cd ${start}
-
-git clone git@github.com:joshlong/reactive-spring-book.git ${start}/book 
-subl ${start} 
-

@@ -1,6 +1,6 @@
-Bootstrap book editing like this: 
+Bootstrap the Bootiful Kubernetes organization
 
 ```shell
-mkdir reactive-spring-book && cd  reactive-spring-book
-curl https://raw.githubusercontent.com/reactive-spring-book/__init__/master/start.sh  | bash 
+mkdir bootiful-kubernetes && cd bootiful-kubernetes
+curl https://raw.githubusercontent.com/bootiful-kubernetes/__init__/master/start.sh | bash 
 ```
